@@ -27,8 +27,7 @@ let hour, min, sec, interval, time;
             } else {
                 if (sec == 59 && min >= 0) {
                     min = changeValue(min);
-                    if (min == 0 && hour > 0) {
-                        min = changeValue(min);
+                    if (min == 59 && hour >= 0) {
                         hour = changeValue(hour);
                     }
                 }
