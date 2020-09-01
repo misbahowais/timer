@@ -37,8 +37,8 @@ let hour, min, sec, interval, time;
         }
 
         function closeInterval() {
+            update('00:00:00');
             clearInterval(interval);
-            alert("Time's up!!!");
             document.querySelector('.input').style.display = "block";
             document.querySelector('.input').value = null;
         }
