@@ -41,6 +41,7 @@ let hour, min, sec, interval, time;
             clearInterval(interval);
             document.querySelector('.input').style.display = "block";
             document.querySelector('.input').value = null;
+            document.querySelector('.input').style = ".align-content: center";
         }
 
         function pauseInterval() {
