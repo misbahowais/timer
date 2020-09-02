@@ -6,12 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="containeru">
-        <input type="text" class="input" placeholder="hh:mm:ss">
-        <div class="display" >00:00:00</div>
-        <button class="startTimer" name="start" onclick="startInterval()">start</button>
-        <button class="closeTimer" name="stop" onclick="closeInterval()">stop</button>
+    <div class="contain">
+        <div class="textClass">
+            <input type="text" class="input" placeholder="hh:mm:ss">
+        </div>
+        <div class="display" >00:00:00
+            <div class="button">
+                <button class="button" name="start" onclick="startInterval()">start</button>
+                <button class="button" onclick="pauseInterval()">pause</button>
+                <button class="button" name="stop" onclick="closeInterval()">stop</button>
+            </div>
+        </div>
     </div>
+    <style>
+        .contain {
+            margin: 5%;
+        }
+        .input, .display,.textClass {
+            font-size: 30px;
+            text-align: center;
+            align-content: center;
+        }
+        .button {
+            font-size: 20px;;
+        }
+    </style>
     <script src="timer.js"></script>
 </body>
 </html>
