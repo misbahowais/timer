@@ -21,7 +21,7 @@ let hour, min, sec, interval, time;
         function startTimer() {
             sec = changeValue(sec);
 
-            if (min == 0 && hour == 0 && sec == 0 ) {
+            if (min == 0 && hour == 0 && (sec == 0 || sec == 59) ) {
                 update('00:00:00');
                 closeInterval();
             } else {
@@ -41,6 +41,12 @@ let hour, min, sec, interval, time;
             clearInterval(interval);
             document.querySelector('.input').style.display = "block";
             document.querySelector('.input').value = null;
+        }
+
+        function pauseInterval() {
+            clearInterval(interval);
+            val = document.querySelector('.display').innerHTML;
+            document.querySelector('.input').value = val;
         }
 
         function changeValue(val) {
